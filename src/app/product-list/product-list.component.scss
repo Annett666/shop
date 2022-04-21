@@ -1,0 +1,16 @@
+.product-list {
+  &__card {
+    max-width: 600px;
+    padding: 8px;
+    margin: 0 auto 16px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    border: 1px dashed #BDBDBD;
+  }
+
+  &__share-btn {
+    max-width: 100px;
+    justify-content: center;
+  }
+}

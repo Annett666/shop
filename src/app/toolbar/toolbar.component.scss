@@ -1,0 +1,18 @@
+.toolbar {
+  max-height: fit-content;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #347deb;
+
+  &__title {
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    &:hover {
+      color: #BDBDBD;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+<h2>Products</h2>
+<ul class="product-list">
+  <li *ngFor="let product of productsList" class="product-list__item">
+    <div class="product-list__card">
+    <span>
+      <a [title]="product.name + ' details'">
+        {{product.name}}
+      </a>
+    </span>
+      <!--    <span>Price, $: {{product.price}}</span>-->
+      <p *ngIf="product.description">
+        Description: {{product.description}}
+      </p>
+
+      <button class="product-list__share-btn" (click)="share()">Share</button>
+    </div>
+  </li>
+</ul>
+
