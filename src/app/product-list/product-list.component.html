@@ -1,9 +1,9 @@
 <h2>Products</h2>
 <ul class="product-list">
-  <li *ngFor="let product of productsList" class="product-list__item">
+  <li *ngFor="let product of productsList; index as productId" class="product-list__item">
     <div class="product-list__card">
     <span>
-      <a [title]="product.name + ' details'">
+      <a [title]="product.name + ' details'" [routerLink]="['/store', productId + 1]">
         {{product.name}}
       </a>
     </span>
@@ -13,6 +13,8 @@
       </p>
 
       <button class="product-list__share-btn" (click)="share()">Share</button>
+
+      <app-product-alerts [product]="product" (notify)="onNotify()"></app-product-alerts>
     </div>
   </li>
 </ul>

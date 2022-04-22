@@ -1,4 +1,6 @@
-export const products = [
+import {ProductType} from "../types/ProductType";
+
+export const products: ProductType[] = [
   {
     name: 'Phone XL',
     price: 799,
