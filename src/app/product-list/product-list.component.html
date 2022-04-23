@@ -1,10 +1,10 @@
 <h2>Products</h2>
 <ul class="product-list">
-  <li *ngFor="let product of productsList; index as productId" class="product-list__item">
+  <li *ngFor="let product of products" class="product-list__item">
     <div class="product-list__card">
     <span>
-      <a [title]="product.name + ' details'" [routerLink]="['/store', productId + 1]">
-        {{product.name}}
+      <a [title]="product.title + ' details'" [routerLink]="['/store', product.id]">
+        {{product.title}}
       </a>
     </span>
       <!--    <span>Price, $: {{product.price}}</span>-->

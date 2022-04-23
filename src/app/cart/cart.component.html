@@ -3,7 +3,7 @@
 <a [routerLink]="['/shipping']">Shipping Prices</a>
 
 <div class="cart-item" *ngFor="let cartItem of cartContents">
-  <span>{{cartItem.name}}</span>
+  <span>{{cartItem.title}}</span>
   <span>{{cartItem.price | currency}}</span>
 </div>
 
