@@ -1,21 +1,28 @@
 <h2>Products</h2>
-<ul class="product-list">
-  <li *ngFor="let product of products" class="product-list__item">
-    <div class="product-list__card">
+  <ul class="product-list">
+    <li *ngFor="let product of products" class="product-list__item">
+      <div class="product-list__card">
     <span>
       <a [title]="product.title + ' details'" [routerLink]="['/store', product.id]">
         {{product.title}}
       </a>
     </span>
-      <!--    <span>Price, $: {{product.price}}</span>-->
-      <p *ngIf="product.description">
-        Description: {{product.description}}
-      </p>
+        <!--    <span>Price, $: {{product.price}}</span>-->
+        <p *ngIf="product.description">
+          Description: {{product.description}}
+        </p>
 
-      <button class="product-list__share-btn" (click)="share()">Share</button>
+        <button class="product-list__share-btn" (click)="share()">Share</button>
 
-      <app-product-alerts [product]="product" (notify)="onNotify()"></app-product-alerts>
-    </div>
-  </li>
-</ul>
+        <app-product-alerts [product]="product" (notify)="onNotify()"></app-product-alerts>
+      </div>
+    </li>
+  </ul>
+<mat-paginator
+  #paginator
+  [length]="length"
+  [pageSize]="pageSize"
+  (page)="pageEvent = getServerData($event)"
+  aria-label="Select page">
+</mat-paginator>
 

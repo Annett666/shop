@@ -1,0 +1,11 @@
+.product-details {
+  &__images {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    img {
+      max-width: 300px;
+      max-height: 150px;
+    }
+  }
+}

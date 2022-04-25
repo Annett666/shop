@@ -6,7 +6,7 @@ export interface ProductType {
   description: string;
   discountPercentage: number;
   id: number;
-  images: any;
+  images: string[];
   rating: number;
   stock: number;
   thumbnail: string;

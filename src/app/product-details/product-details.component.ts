@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from "@angular/router";
 import {ProductType} from "../../types/ProductType";
 import {CartService} from "../../services/cart.service";
@@ -16,11 +16,13 @@ export class ProductDetailsComponent implements OnInit {
     private route: ActivatedRoute,
     private cartService: CartService,
     private productService: ProductListService,
-) {}
+  ) {}
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
-      this.product = this.productService.productsList[+params.get('productId')! - 1];
+      this.product = this.productService.productsList.filter((item: ProductType) => {
+        return item.id === +params.get('productId')!
+      })[0];
     });
   }
 

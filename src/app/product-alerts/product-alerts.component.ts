@@ -8,8 +8,7 @@ import {ProductType} from "../../types/ProductType";
 })
 export class ProductAlertsComponent implements OnInit {
 
-  // @ts-ignore
-  @Input() product: ProductType;
+  @Input() product!: ProductType;
   @Output() notify = new EventEmitter();
 
   constructor() { }

@@ -1,7 +1,12 @@
 <h2>Product Details</h2>
 
-<div *ngIf="product">
+<div *ngIf="product" class="product-details">
   <h3>{{ product.title }}</h3>
+  <ul *ngIf="product.images" class="product-details__images">
+    <li *ngFor="let img of product.images">
+      <img src="{{img}}" alt="{{img}}" />
+    </li>
+  </ul>
   <h4>{{ product.price | currency }}</h4>
   <p>{{ product.description }}</p>
 

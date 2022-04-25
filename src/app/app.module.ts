@@ -15,6 +15,7 @@ import { CartComponent } from './cart/cart.component';
 import {HttpClientModule} from "@angular/common/http";
 import { ShippingComponent } from './shipping/shipping.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {MatPaginatorModule} from "@angular/material/paginator";
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+    MatPaginatorModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
