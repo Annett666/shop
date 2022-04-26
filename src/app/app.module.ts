@@ -5,37 +5,24 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {ToolbarComponent} from './toolbar/toolbar.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {ProductListComponent} from './product-list/product-list.component';
 import {RouterModule} from "@angular/router";
 import {appRoutes} from "./routes";
 import { NotFoundComponent } from './not-found/not-found.component';
-import { ProductAlertsComponent } from './product-alerts/product-alerts.component';
-import { ProductDetailsComponent } from './product-details/product-details.component';
-import { CartComponent } from './cart/cart.component';
-import {HttpClientModule} from "@angular/common/http";
-import { ShippingComponent } from './shipping/shipping.component';
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-import {MatPaginatorModule} from "@angular/material/paginator";
+import {ProductListModule} from "./product-list/product-list/product-list.module";
+import {CartModule} from "./cart/cart/cart.module";
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolbarComponent,
-    ProductListComponent,
     NotFoundComponent,
-    ProductAlertsComponent,
-    ProductDetailsComponent,
-    CartComponent,
-    ShippingComponent
   ],
   imports: [
+    ProductListModule,
+    CartModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule,
-    ReactiveFormsModule,
-    FormsModule,
-    MatPaginatorModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
